@@ -52,19 +52,21 @@
     <ImplicitlyExpandDesignTimeFacades>false</ImplicitlyExpandDesignTimeFacades>
   </PropertyGroup>
   <ItemGroup>
-     <Compile Include="Assets\Warthog\Standard Assets\Vehicles\Car\Scripts\CarController.cs" />
-     <Compile Include="Assets\Warthog\Standard Assets\Vehicles\Car\Scripts\Suspension.cs" />
-     <Compile Include="Assets\Warthog\SmoothFollow.cs" />
-     <Compile Include="Assets\Warthog\Standard Assets\Vehicles\Car\Scripts\Mudguard.cs" />
-     <Compile Include="Assets\Warthog\Standard Assets\Vehicles\Car\Scripts\CarAIControl.cs" />
-     <Compile Include="Assets\Warthog\Standard Assets\Vehicles\Car\Scripts\SkidTrail.cs" />
-     <Compile Include="Assets\Warthog\Standard Assets\Vehicles\Car\Scripts\CarUserControl.cs" />
      <Compile Include="Assets\Warthog\Standard Assets\Vehicles\Car\Scripts\WheelEffects.cs" />
-     <Compile Include="Assets\Warthog\Standard Assets\Vehicles\Car\Scripts\BrakeLight.cs" />
-     <Compile Include="Assets\Warthog\Standard Assets\Vehicles\Car\Scripts\CarAudio.cs" />
      <Compile Include="Assets\Warthog\Standard Assets\Vehicles\Car\Scripts\CarSelfRighting.cs" />
-     <Compile Include="Assets\DogKnight\DogMoveComponent.cs" />
+     <Compile Include="Assets\Warthog\Standard Assets\Vehicles\Car\Scripts\Mudguard.cs" />
+     <Compile Include="Assets\Warthog\Standard Assets\Vehicles\Car\Scripts\BrakeLight.cs" />
+     <Compile Include="Assets\Warthog\Standard Assets\Vehicles\Car\Scripts\CarAIControl.cs" />
+     <Compile Include="Assets\Warthog\SmoothFollow.cs" />
+     <Compile Include="Assets\Warthog\Standard Assets\Vehicles\Car\Scripts\SkidTrail.cs" />
      <Compile Include="Assets\DogKnight\DogMoveSystem.cs" />
+     <Compile Include="Assets\Warthog\Standard Assets\Vehicles\Car\Scripts\CarAudio.cs" />
+     <Compile Include="Assets\DogKnight\DogMoveComponent.cs" />
+     <Compile Include="Assets\Warthog\Standard Assets\Vehicles\Car\Scripts\Suspension.cs" />
+     <Compile Include="Assets\Warthog\Standard Assets\Vehicles\Car\Scripts\CarController.cs" />
+     <Compile Include="Assets\Warthog\Standard Assets\Vehicles\Car\Scripts\CarUserControl.cs" />
+     <Compile Include="Assets\Script\SpawnCubes.cs" />
+     <Compile Include="Assets\Script\SpawnCar.cs" />
  <Reference Include="UnityEngine">
  <HintPath>/Applications/Unity/Hub/Editor/2020.3.13f1/Unity.app/Contents/Managed/UnityEngine/UnityEngine.dll</HintPath>
  </Reference>
@@ -287,14 +289,14 @@
  <Reference Include="UnityEditor.UnityConnectModule">
  <HintPath>/Applications/Unity/Hub/Editor/2020.3.13f1/Unity.app/Contents/Managed/UnityEngine/UnityEditor.UnityConnectModule.dll</HintPath>
  </Reference>
- <Reference Include="Newtonsoft.Json">
- <HintPath>/Users/rozencrants/Desktop/GameDev/Patterns/2Flyweight/Flyweight-ECS/Library/PackageCache/com.unity.nuget.newtonsoft-json@2.0.0/Runtime/Newtonsoft.Json.dll</HintPath>
- </Reference>
- <Reference Include="Unity.Burst.Unsafe">
- <HintPath>/Users/rozencrants/Desktop/GameDev/Patterns/2Flyweight/Flyweight-ECS/Library/PackageCache/com.unity.burst@1.4.1/Unity.Burst.Unsafe.dll</HintPath>
- </Reference>
  <Reference Include="Unity.Collections.LowLevel.ILSupport">
  <HintPath>/Users/rozencrants/Desktop/GameDev/Patterns/2Flyweight/Flyweight-ECS/Library/PackageCache/com.unity.collections@0.15.0-preview.21/Unity.Collections.LowLevel.ILSupport/Unity.Collections.LowLevel.ILSupport.dll</HintPath>
+ </Reference>
+ <Reference Include="Unity.Burst.Unsafe">
+ <HintPath>/Users/rozencrants/Desktop/GameDev/Patterns/2Flyweight/Flyweight-ECS/Library/PackageCache/com.unity.burst@1.4.11/Unity.Burst.Unsafe.dll</HintPath>
+ </Reference>
+ <Reference Include="Newtonsoft.Json">
+ <HintPath>/Users/rozencrants/Desktop/GameDev/Patterns/2Flyweight/Flyweight-ECS/Library/PackageCache/com.unity.nuget.newtonsoft-json@2.0.0/Runtime/Newtonsoft.Json.dll</HintPath>
  </Reference>
  <Reference Include="mscorlib">
  <HintPath>/Applications/Unity/Hub/Editor/2020.3.13f1/Unity.app/Contents/MonoBleedingEdge/lib/mono/4.7.1-api/mscorlib.dll</HintPath>
@@ -644,29 +646,26 @@
  <Reference Include="netstandard">
  <HintPath>/Applications/Unity/Hub/Editor/2020.3.13f1/Unity.app/Contents/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/netstandard.dll</HintPath>
  </Reference>
+ <Reference Include="Unity.Transforms.Hybrid">
+ <HintPath>/Users/rozencrants/Desktop/GameDev/Patterns/2Flyweight/Flyweight-ECS/Library/ScriptAssemblies/Unity.Transforms.Hybrid.dll</HintPath>
+ </Reference>
+ <Reference Include="Unity.Properties">
+ <HintPath>/Users/rozencrants/Desktop/GameDev/Patterns/2Flyweight/Flyweight-ECS/Library/ScriptAssemblies/Unity.Properties.dll</HintPath>
+ </Reference>
+ <Reference Include="Unity.Serialization">
+ <HintPath>/Users/rozencrants/Desktop/GameDev/Patterns/2Flyweight/Flyweight-ECS/Library/ScriptAssemblies/Unity.Serialization.dll</HintPath>
+ </Reference>
  <Reference Include="Unity.VSCode.Editor">
  <HintPath>/Users/rozencrants/Desktop/GameDev/Patterns/2Flyweight/Flyweight-ECS/Library/ScriptAssemblies/Unity.VSCode.Editor.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEditor.CacheServer">
+ <HintPath>/Users/rozencrants/Desktop/GameDev/Patterns/2Flyweight/Flyweight-ECS/Library/ScriptAssemblies/UnityEditor.CacheServer.dll</HintPath>
  </Reference>
  <Reference Include="Unity.TextMeshPro.Editor">
  <HintPath>/Users/rozencrants/Desktop/GameDev/Patterns/2Flyweight/Flyweight-ECS/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
  </Reference>
- <Reference Include="Unity.VisualStudio.Editor">
- <HintPath>/Users/rozencrants/Desktop/GameDev/Patterns/2Flyweight/Flyweight-ECS/Library/ScriptAssemblies/Unity.VisualStudio.Editor.dll</HintPath>
- </Reference>
- <Reference Include="Unity.Timeline.Editor">
- <HintPath>/Users/rozencrants/Desktop/GameDev/Patterns/2Flyweight/Flyweight-ECS/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
- </Reference>
- <Reference Include="Unity.Timeline">
- <HintPath>/Users/rozencrants/Desktop/GameDev/Patterns/2Flyweight/Flyweight-ECS/Library/ScriptAssemblies/Unity.Timeline.dll</HintPath>
- </Reference>
- <Reference Include="Unity.TextMeshPro">
- <HintPath>/Users/rozencrants/Desktop/GameDev/Patterns/2Flyweight/Flyweight-ECS/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
- </Reference>
  <Reference Include="UnityEditor.UI">
  <HintPath>/Users/rozencrants/Desktop/GameDev/Patterns/2Flyweight/Flyweight-ECS/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
- </Reference>
- <Reference Include="Unity.PlasticSCM.Editor">
- <HintPath>/Users/rozencrants/Desktop/GameDev/Patterns/2Flyweight/Flyweight-ECS/Library/ScriptAssemblies/Unity.PlasticSCM.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.Rider.Editor">
  <HintPath>/Users/rozencrants/Desktop/GameDev/Patterns/2Flyweight/Flyweight-ECS/Library/ScriptAssemblies/Unity.Rider.Editor.dll</HintPath>
@@ -674,26 +673,68 @@
  <Reference Include="UnityEngine.UI">
  <HintPath>/Users/rozencrants/Desktop/GameDev/Patterns/2Flyweight/Flyweight-ECS/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
  </Reference>
+ <Reference Include="Unity.Entities.Hybrid.EndToEnd.Tests">
+ <HintPath>/Users/rozencrants/Desktop/GameDev/Patterns/2Flyweight/Flyweight-ECS/Library/ScriptAssemblies/Unity.Entities.Hybrid.EndToEnd.Tests.dll</HintPath>
+ </Reference>
  <Reference Include="Unity.Properties.UI.Editor">
  <HintPath>/Users/rozencrants/Desktop/GameDev/Patterns/2Flyweight/Flyweight-ECS/Library/ScriptAssemblies/Unity.Properties.UI.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.Scenes">
  <HintPath>/Users/rozencrants/Desktop/GameDev/Patterns/2Flyweight/Flyweight-ECS/Library/ScriptAssemblies/Unity.Scenes.dll</HintPath>
  </Reference>
+ <Reference Include="Unity.Mathematics.Extensions">
+ <HintPath>/Users/rozencrants/Desktop/GameDev/Patterns/2Flyweight/Flyweight-ECS/Library/ScriptAssemblies/Unity.Mathematics.Extensions.dll</HintPath>
+ </Reference>
+ <Reference Include="Unity.Mathematics.Editor">
+ <HintPath>/Users/rozencrants/Desktop/GameDev/Patterns/2Flyweight/Flyweight-ECS/Library/ScriptAssemblies/Unity.Mathematics.Editor.dll</HintPath>
+ </Reference>
+ <Reference Include="Unity.Transforms">
+ <HintPath>/Users/rozencrants/Desktop/GameDev/Patterns/2Flyweight/Flyweight-ECS/Library/ScriptAssemblies/Unity.Transforms.dll</HintPath>
+ </Reference>
+ <Reference Include="Unity.Collections">
+ <HintPath>/Users/rozencrants/Desktop/GameDev/Patterns/2Flyweight/Flyweight-ECS/Library/ScriptAssemblies/Unity.Collections.dll</HintPath>
+ </Reference>
+ <Reference Include="Unity.Scenes.Editor">
+ <HintPath>/Users/rozencrants/Desktop/GameDev/Patterns/2Flyweight/Flyweight-ECS/Library/ScriptAssemblies/Unity.Scenes.Editor.dll</HintPath>
+ </Reference>
  <Reference Include="Unity.Mathematics.Extensions.Hybrid">
  <HintPath>/Users/rozencrants/Desktop/GameDev/Patterns/2Flyweight/Flyweight-ECS/Library/ScriptAssemblies/Unity.Mathematics.Extensions.Hybrid.dll</HintPath>
+ </Reference>
+ <Reference Include="Unity.Entities.Editor">
+ <HintPath>/Users/rozencrants/Desktop/GameDev/Patterns/2Flyweight/Flyweight-ECS/Library/ScriptAssemblies/Unity.Entities.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.Entities.BuildUtils">
  <HintPath>/Users/rozencrants/Desktop/GameDev/Patterns/2Flyweight/Flyweight-ECS/Library/ScriptAssemblies/Unity.Entities.BuildUtils.dll</HintPath>
  </Reference>
- <Reference Include="Unity.Properties.UI">
- <HintPath>/Users/rozencrants/Desktop/GameDev/Patterns/2Flyweight/Flyweight-ECS/Library/ScriptAssemblies/Unity.Properties.UI.dll</HintPath>
+ <Reference Include="Unity.VisualStudio.Editor">
+ <HintPath>/Users/rozencrants/Desktop/GameDev/Patterns/2Flyweight/Flyweight-ECS/Library/ScriptAssemblies/Unity.VisualStudio.Editor.dll</HintPath>
  </Reference>
- <Reference Include="Unity.ScriptableBuildPipeline">
- <HintPath>/Users/rozencrants/Desktop/GameDev/Patterns/2Flyweight/Flyweight-ECS/Library/ScriptAssemblies/Unity.ScriptableBuildPipeline.dll</HintPath>
+ <Reference Include="Unity.Timeline">
+ <HintPath>/Users/rozencrants/Desktop/GameDev/Patterns/2Flyweight/Flyweight-ECS/Library/ScriptAssemblies/Unity.Timeline.dll</HintPath>
  </Reference>
- <Reference Include="Unity.Serialization">
- <HintPath>/Users/rozencrants/Desktop/GameDev/Patterns/2Flyweight/Flyweight-ECS/Library/ScriptAssemblies/Unity.Serialization.dll</HintPath>
+ <Reference Include="Unity.TextMeshPro">
+ <HintPath>/Users/rozencrants/Desktop/GameDev/Patterns/2Flyweight/Flyweight-ECS/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
+ </Reference>
+ <Reference Include="Unity.Burst.Editor">
+ <HintPath>/Users/rozencrants/Desktop/GameDev/Patterns/2Flyweight/Flyweight-ECS/Library/ScriptAssemblies/Unity.Burst.Editor.dll</HintPath>
+ </Reference>
+ <Reference Include="Unity.PlasticSCM.Editor">
+ <HintPath>/Users/rozencrants/Desktop/GameDev/Patterns/2Flyweight/Flyweight-ECS/Library/ScriptAssemblies/Unity.PlasticSCM.Editor.dll</HintPath>
+ </Reference>
+ <Reference Include="Unity.Entities">
+ <HintPath>/Users/rozencrants/Desktop/GameDev/Patterns/2Flyweight/Flyweight-ECS/Library/ScriptAssemblies/Unity.Entities.dll</HintPath>
+ </Reference>
+ <Reference Include="Unity.Entities.Hybrid">
+ <HintPath>/Users/rozencrants/Desktop/GameDev/Patterns/2Flyweight/Flyweight-ECS/Library/ScriptAssemblies/Unity.Entities.Hybrid.dll</HintPath>
+ </Reference>
+ <Reference Include="Unity.Jobs.Editor">
+ <HintPath>/Users/rozencrants/Desktop/GameDev/Patterns/2Flyweight/Flyweight-ECS/Library/ScriptAssemblies/Unity.Jobs.Editor.dll</HintPath>
+ </Reference>
+ <Reference Include="Unity.Mathematics">
+ <HintPath>/Users/rozencrants/Desktop/GameDev/Patterns/2Flyweight/Flyweight-ECS/Library/ScriptAssemblies/Unity.Mathematics.dll</HintPath>
+ </Reference>
+ <Reference Include="Unity.Burst">
+ <HintPath>/Users/rozencrants/Desktop/GameDev/Patterns/2Flyweight/Flyweight-ECS/Library/ScriptAssemblies/Unity.Burst.dll</HintPath>
  </Reference>
  <Reference Include="Unity.Jobs">
  <HintPath>/Users/rozencrants/Desktop/GameDev/Patterns/2Flyweight/Flyweight-ECS/Library/ScriptAssemblies/Unity.Jobs.dll</HintPath>
@@ -701,56 +742,17 @@
  <Reference Include="Unity.Deformations">
  <HintPath>/Users/rozencrants/Desktop/GameDev/Patterns/2Flyweight/Flyweight-ECS/Library/ScriptAssemblies/Unity.Deformations.dll</HintPath>
  </Reference>
- <Reference Include="Unity.Properties">
- <HintPath>/Users/rozencrants/Desktop/GameDev/Patterns/2Flyweight/Flyweight-ECS/Library/ScriptAssemblies/Unity.Properties.dll</HintPath>
+ <Reference Include="Unity.Timeline.Editor">
+ <HintPath>/Users/rozencrants/Desktop/GameDev/Patterns/2Flyweight/Flyweight-ECS/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
  </Reference>
- <Reference Include="UnityEditor.CacheServer">
- <HintPath>/Users/rozencrants/Desktop/GameDev/Patterns/2Flyweight/Flyweight-ECS/Library/ScriptAssemblies/UnityEditor.CacheServer.dll</HintPath>
+ <Reference Include="Unity.Properties.UI">
+ <HintPath>/Users/rozencrants/Desktop/GameDev/Patterns/2Flyweight/Flyweight-ECS/Library/ScriptAssemblies/Unity.Properties.UI.dll</HintPath>
  </Reference>
- <Reference Include="Unity.Jobs.Editor">
- <HintPath>/Users/rozencrants/Desktop/GameDev/Patterns/2Flyweight/Flyweight-ECS/Library/ScriptAssemblies/Unity.Jobs.Editor.dll</HintPath>
- </Reference>
- <Reference Include="Unity.Scenes.Editor">
- <HintPath>/Users/rozencrants/Desktop/GameDev/Patterns/2Flyweight/Flyweight-ECS/Library/ScriptAssemblies/Unity.Scenes.Editor.dll</HintPath>
- </Reference>
- <Reference Include="Unity.Collections">
- <HintPath>/Users/rozencrants/Desktop/GameDev/Patterns/2Flyweight/Flyweight-ECS/Library/ScriptAssemblies/Unity.Collections.dll</HintPath>
- </Reference>
- <Reference Include="Unity.Entities.Hybrid.EndToEnd.Tests">
- <HintPath>/Users/rozencrants/Desktop/GameDev/Patterns/2Flyweight/Flyweight-ECS/Library/ScriptAssemblies/Unity.Entities.Hybrid.EndToEnd.Tests.dll</HintPath>
- </Reference>
- <Reference Include="Unity.Mathematics.Editor">
- <HintPath>/Users/rozencrants/Desktop/GameDev/Patterns/2Flyweight/Flyweight-ECS/Library/ScriptAssemblies/Unity.Mathematics.Editor.dll</HintPath>
- </Reference>
- <Reference Include="Unity.Entities.Editor">
- <HintPath>/Users/rozencrants/Desktop/GameDev/Patterns/2Flyweight/Flyweight-ECS/Library/ScriptAssemblies/Unity.Entities.Editor.dll</HintPath>
- </Reference>
- <Reference Include="Unity.Entities.Hybrid">
- <HintPath>/Users/rozencrants/Desktop/GameDev/Patterns/2Flyweight/Flyweight-ECS/Library/ScriptAssemblies/Unity.Entities.Hybrid.dll</HintPath>
- </Reference>
- <Reference Include="Unity.Mathematics">
- <HintPath>/Users/rozencrants/Desktop/GameDev/Patterns/2Flyweight/Flyweight-ECS/Library/ScriptAssemblies/Unity.Mathematics.dll</HintPath>
- </Reference>
- <Reference Include="Unity.Transforms.Hybrid">
- <HintPath>/Users/rozencrants/Desktop/GameDev/Patterns/2Flyweight/Flyweight-ECS/Library/ScriptAssemblies/Unity.Transforms.Hybrid.dll</HintPath>
- </Reference>
- <Reference Include="Unity.Burst">
- <HintPath>/Users/rozencrants/Desktop/GameDev/Patterns/2Flyweight/Flyweight-ECS/Library/ScriptAssemblies/Unity.Burst.dll</HintPath>
- </Reference>
- <Reference Include="Unity.Mathematics.Extensions">
- <HintPath>/Users/rozencrants/Desktop/GameDev/Patterns/2Flyweight/Flyweight-ECS/Library/ScriptAssemblies/Unity.Mathematics.Extensions.dll</HintPath>
- </Reference>
- <Reference Include="Unity.Transforms">
- <HintPath>/Users/rozencrants/Desktop/GameDev/Patterns/2Flyweight/Flyweight-ECS/Library/ScriptAssemblies/Unity.Transforms.dll</HintPath>
- </Reference>
- <Reference Include="Unity.Entities">
- <HintPath>/Users/rozencrants/Desktop/GameDev/Patterns/2Flyweight/Flyweight-ECS/Library/ScriptAssemblies/Unity.Entities.dll</HintPath>
+ <Reference Include="Unity.ScriptableBuildPipeline">
+ <HintPath>/Users/rozencrants/Desktop/GameDev/Patterns/2Flyweight/Flyweight-ECS/Library/ScriptAssemblies/Unity.ScriptableBuildPipeline.dll</HintPath>
  </Reference>
  <Reference Include="Unity.Serialization.Editor">
  <HintPath>/Users/rozencrants/Desktop/GameDev/Patterns/2Flyweight/Flyweight-ECS/Library/ScriptAssemblies/Unity.Serialization.Editor.dll</HintPath>
- </Reference>
- <Reference Include="Unity.Burst.Editor">
- <HintPath>/Users/rozencrants/Desktop/GameDev/Patterns/2Flyweight/Flyweight-ECS/Library/ScriptAssemblies/Unity.Burst.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.ScriptableBuildPipeline.Editor">
  <HintPath>/Users/rozencrants/Desktop/GameDev/Patterns/2Flyweight/Flyweight-ECS/Library/ScriptAssemblies/Unity.ScriptableBuildPipeline.Editor.dll</HintPath>
